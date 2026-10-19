@@ -2,26 +2,113 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  color-scheme: light;
+  --background: #f4f6fa;
+  --surface: #ffffff;
+  --text: #0f1a2e;
+  --text-muted: #5b6a82;
+  --border: #dfe5ef;
+  --accent: #0d9488;
+  --accent-soft: #e6f6f4;
+  --accent-on: #04211d;
+  --code-background: #f0f3f9;
+  --warning: #b45309;
+  --warning-soft: #fef3e2;
+  --sidebar: #0b1730;
+  --sidebar-text: #b8c4da;
+  --sidebar-text-active: #ffffff;
+  --sidebar-active: rgb(45 212 191 / 16%);
+  --sidebar-hover: rgb(255 255 255 / 7%);
+  --status-online: #34d399;
+  --status-pass: #0d9488;
+  --status-concern: #b45309;
+  --chart-typescript: #0d9488;
+  --chart-markdown: #6366f1;
+  --chart-json: #f59e0b;
+  --chart-other: #94a3b8;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: dark;
+    --background: #0a1222;
+    --surface: #111c33;
+    --text: #e8eefb;
+    --text-muted: #93a3bf;
+    --border: #223250;
+    --accent: #2dd4bf;
+    --accent-soft: #0f2d33;
+    --accent-on: #04211d;
+    --code-background: #0c1730;
+    --warning: #fbbf24;
+    --warning-soft: #3a2b0d;
+    --sidebar: #060d1c;
+    --status-pass: #2dd4bf;
   }
 }
 
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-on: var(--accent-on);
+  --color-code-background: var(--code-background);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-text: var(--sidebar-text);
+  --color-sidebar-text-active: var(--sidebar-text-active);
+  --color-sidebar-active: var(--sidebar-active);
+  --color-sidebar-hover: var(--sidebar-hover);
+  --color-status-online: var(--status-online);
+  --color-status-pass: var(--status-pass);
+  --color-status-concern: var(--status-concern);
+  --color-chart-typescript: var(--chart-typescript);
+  --color-chart-markdown: var(--chart-markdown);
+  --color-chart-json: var(--chart-json);
+  --color-chart-other: var(--chart-other);
+
+  --font-sans: "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --font-mono: ui-monospace, Menlo, Consolas, monospace;
+
+  --text-nav-label-mobile: 0.6875rem;
+  --text-caption: 0.75rem;
+  --text-small: 0.8125rem;
+  --text-table: 0.875rem;
+  --text-body: 0.9375rem;
+  --text-body--line-height: 1.55;
+  --text-heading2: 1.125rem;
+  --text-stat: 1.5rem;
+  --text-heading1: 2rem;
+  --text-heading1--line-height: 1.25;
+
+  --leading-heading: 1.25;
+  --leading-body: 1.55;
+  --leading-code: 1.6;
+
+  --spacing: 4px;
+  --spacing-sidebar: 230px;
+  --spacing-mobile-tabbar: 64px;
+
+  --radius-chip: 8px;
+  --radius-control: 10px;
+  --radius-card: 12px;
+  --radius-pill: 999px;
+
+  --breakpoint-desktop: 901px;
+  --container-content: 1180px;
+  --container-explorer-file-list: 260px;
+}
+
 body {
+  min-height: 100%;
+  margin: 0;
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  font-family: var(--font-sans);
+  line-height: 1.55;
 }
