@@ -26,10 +26,7 @@ function MenuIcon({ name }: { name: (typeof menuItems)[number]["icon"] }) {
     case "overview":
       return (
         <svg {...shared}>
-          <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" />
-          <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" />
-          <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" />
-          <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" />
+          <path d="m3.5 10 8.5-7 8.5 7M5.5 9v11h13V9M9.5 20v-6h5v6" />
         </svg>
       );
     case "code":
@@ -109,19 +106,20 @@ export default function AppNavigation() {
             R
           </span>
           <span className="text-heading2 font-bold tracking-tight text-sidebar-text-active">
-            Repo Master
+            RepoMind
           </span>
         </Link>
         <p className="mb-3 px-3 text-nav-label-mobile font-bold uppercase tracking-[0.14em] text-sidebar-text">
           Workspace
         </p>
         <NavigationLinks />
-        <div className="mt-auto rounded-card bg-sidebar-hover p-4">
-          <p className="text-small font-bold text-sidebar-text-active">
-            Your workspace
-          </p>
-          <p className="mt-1 text-caption leading-body text-sidebar-text">
-            Navigate your project from one place.
+        <div className="mt-auto rounded-control border border-sidebar-text/20 p-3">
+          <p className="flex items-center gap-2 text-body text-sidebar-text">
+            <span
+              aria-hidden="true"
+              className="size-2.5 rounded-pill bg-status-online"
+            />
+            Local model: Ollama
           </p>
         </div>
       </aside>
