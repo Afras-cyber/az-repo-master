@@ -1,10 +1,5 @@
-import SectionPage from "../components/section-page";
+import ChatInterface from "./chat-interface";
 
 export default function AskPage() {
-  return (
-    <SectionPage
-      title="Ask"
-      description="Ask questions and get help understanding your repository."
-    />
-  );
+  return <ChatInterface />;
 }
